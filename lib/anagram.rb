@@ -17,4 +17,8 @@ class String
     end
     output
   end
+
+  define_method :is_antigram? do |input|
+    self.downcase.split('').sort != input.downcase.split('').sort
+  end  
 end

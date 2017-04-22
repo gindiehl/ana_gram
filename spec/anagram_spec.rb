@@ -24,3 +24,9 @@ describe('String#is_word?') do
     expect("bd".is_word?("a")).to(eq(false))
   end
 end
+
+describe('String#is_antigram?') do
+  it('checks that input is an "antigram"') do
+    expect("hi".is_antigram?("bye")).to(eq(true))
+  end
+end
