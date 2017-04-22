@@ -3,4 +3,7 @@ class String
     self.downcase.split('').sort == input.downcase.split('').sort
   end
 
-end
+  define_method :is_palindrome? do |input|
+    self.downcase.reverse == self.downcase
+  end
+end  
