@@ -1,4 +1,5 @@
 class String
+
   define_method :is_anagram? do |input|
     self.downcase.split('').sort == input.downcase.split('').sort
   end
@@ -20,5 +21,11 @@ class String
 
   define_method :is_antigram? do |input|
     self.downcase.split('').sort != input.downcase.split('').sort
-  end  
+  end
+
+  define_method :is_clean? do |input|
+    scrubbed_input = self.downcase.gsub!(/[^a-zA-Z]/, '')
+    scrubbed_input
+  end
+
 end

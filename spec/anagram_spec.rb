@@ -30,3 +30,9 @@ describe('String#is_antigram?') do
     expect("hi".is_antigram?("bye")).to(eq(true))
   end
 end
+
+describe('String#is_clean?') do
+  it('checks that input does not contain spaces or punctuation') do
+    expect("g.ill".is_clean?("_")).to(eq("gill"))
+  end
+end
