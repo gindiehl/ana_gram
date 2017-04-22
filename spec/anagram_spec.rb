@@ -15,3 +15,9 @@ describe('String#is_palindrome?') do
     expect("dad".is_palindrome?("dad")).to(eq(true))
   end
 end
+
+describe('String#is_word?') do
+  it('checks to see that user input contains vowels') do
+    expect("tree".is_word?("e")).to(eq(true))
+  end
+end
