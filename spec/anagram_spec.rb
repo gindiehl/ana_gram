@@ -17,7 +17,10 @@ describe('String#is_palindrome?') do
 end
 
 describe('String#is_word?') do
-  it('checks to see that user input contains vowels') do
+  it('checks that input is a word by checking to see that user input contains vowels') do
     expect("tree".is_word?("e")).to(eq(true))
+  end
+  it('checks that input is not a word if input does not contain vowels') do
+    expect("bd".is_word?("a")).to(eq(false))
   end
 end
