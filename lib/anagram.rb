@@ -1,13 +1,5 @@
 class String
 
-  define_method :is_anagram? do |input|
-    self.downcase.split('').sort == input.downcase.split('').sort
-  end
-
-  define_method :is_palindrome? do |input|
-    self.downcase.reverse == self.downcase
-  end
-
   define_method :is_word? do |input|
     output = false
     words = self.downcase.split('')
@@ -19,13 +11,24 @@ class String
     output
   end
 
-  define_method :is_antigram? do |input|
-    self.downcase.split('').sort != input.downcase.split('').sort
-  end
-
   define_method :is_clean? do |input|
     scrubbed_input = self.downcase.gsub!(/[^a-zA-Z]/, '')
     scrubbed_input
+  end
+
+  define_method :is_anagram? do |input|
+    self.downcase.split('').sort == input.downcase.split('').sort
+    return "This is an anagram!"
+  end
+
+  define_method :is_palindrome? do |input|
+    self.downcase.reverse == self.downcase
+    return "This is a palindrome!"
+  end
+
+  define_method :is_antigram? do |input|
+    self.downcase.split('').sort != input.downcase.split('').sort
+    return "This is an antigram!"
   end
 
 end

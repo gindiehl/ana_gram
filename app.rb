@@ -5,10 +5,12 @@ require('./lib/anagram')
 
 
 get('/') do
+  @title = "Anagram, 'Antigram', or Palindrome?"
   erb(:index)
 end
 
-# get('/anagram') do
-#   @result = params.fetch('phrase').anagram()
-#   erb(:anagram)
-# end
+get('/result') do
+  # @phrase = params.fetch('phrase')
+
+  erb(:result)
+end
