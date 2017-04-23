@@ -18,21 +18,21 @@ end
 
 describe('String#is_anagram?') do
   it('checks if words are anagrams') do
-    expect("art".is_anagram?("rat")).to(eq("This is an anagram!"))
+    expect("art".is_anagram?("rat")).to(eq("Anagram!"))
   end
   it('checks if words are anagrams regardless of case') do
-    expect("aRt".is_anagram?("rAt")).to(eq("This is an anagram!"))
+    expect("aRt".is_anagram?("rAt")).to(eq("Anagram!"))
   end
 end
 
 describe('String#is_palindrome?') do
   it('checks to see if words that are anagrams are also palindromes') do
-    expect("dad".is_palindrome?("dad")).to(eq("This is a palindrome!"))
+    expect("dad".is_palindrome?("dad")).to(eq("Palindrome!"))
   end
 end
 
 describe('String#is_antigram?') do
   it('checks that input is an "antigram"') do
-    expect("hi".is_antigram?("bye")).to(eq("This is an antigram!"))
+    expect("hi".is_antigram?("bye")).to(eq("Antigram!"))
   end
 end

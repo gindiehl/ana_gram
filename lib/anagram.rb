@@ -1,6 +1,6 @@
 class String
 
-  define_method :is_word? do |input|
+  define_method :is_word? do |input1|
     output = false
     words = self.downcase.split('')
     words.each() do |word|
@@ -18,17 +18,17 @@ class String
 
   define_method :is_anagram? do |input|
     self.downcase.split('').sort == input.downcase.split('').sort
-    return "This is an anagram!"
+    return ('Anagram!')
   end
 
   define_method :is_palindrome? do |input|
     self.downcase.reverse == self.downcase
-    return "This is a palindrome!"
+    return ('Palindrome!')
   end
 
   define_method :is_antigram? do |input|
     self.downcase.split('').sort != input.downcase.split('').sort
-    return "This is an antigram!"
+    return ('Antigram!')
   end
 
 end

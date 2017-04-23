@@ -10,7 +10,7 @@ get('/') do
 end
 
 get('/result') do
-  # @phrase = params.fetch('phrase')
-
+  @phrase = params.fetch('phrase')
+  
   erb(:result)
 end
