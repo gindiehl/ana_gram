@@ -1,7 +1,5 @@
 class String
 
-  # def grand_method
-
   def actual_word? (user_input)
     user_input.match?(/[aeiouy]+/i)
   end
@@ -27,5 +25,5 @@ class String
     self.downcase.split('').sort != input2.downcase.split('').sort
     return true
   end
-
+  
 end

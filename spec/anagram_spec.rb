@@ -38,3 +38,20 @@ describe 'String#is_antigram?' do
     expect(word.is_antigram?("bye", "hi")).to(eq(true))
   end
 end
+
+# describe 'String#grand_method' do
+#   it 'checks that words contain a vowel' do
+#     expect(word.grand_method("br", "kl")).to(eq("Please enter words with vowels."))
+#   end
+# end
+#   it 'returns true if words are anagrams' do
+#     expect(word.grand_method("art", "rat")).to(eq(true))
+#   end
+# end
+  # it 'checks if words that are anagrams are also palindromes' do
+  #   expect(("dad").grand_method("add")).to(eq("These words are anagrams and one word is a palindrome."))
+  # end
+  # it 'checks that words which are not anagrams are antigrams' do
+  #   expect(("wet").grand_method("sap")).to(eq("These words are not anagrams, they are antigrams."))
+  # end
+# end
