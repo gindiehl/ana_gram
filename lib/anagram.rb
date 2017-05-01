@@ -1,29 +1,26 @@
 class String
 
-  def actual_word? (user_input)
-    user_input.match?(/[aeiouy]+/i)
+  define_method(:actual_word?) do |input1, input2|
+    if input1.length !=0 && input1.match((/[aeiouy]+/i))
+      input1 = input1.downcase.gsub!(/[^a-zA-Z]/, '')
+      true
+    elsif input2.length !=0 && input2.match((/[aeiouy]+/i))
+      input2 = input2.downcase.gsub!(/[^a-zA-Z]/, '')
+    else
+      false
+    end
   end
 
-  def scrubbed_input (user_input)
-    output = user_input.downcase.gsub!(/[^a-zA-Z]/, '')
-    output
+  define_method(:is_anagram?) do |input1, input2|
+    input1.downcase.split('').sort == input2.downcase.split('').sort
   end
 
-
-  def is_anagram? (input1, input2)
-    self.downcase.split('').sort == input2.downcase.split('').sort
-    return true
+  define_method(:is_palindrome?) do |input1, input2|
+    input1.reverse == input2
   end
 
-
-  def is_palindrome? (input1, input2)
-    self.downcase.reverse == input2.downcase
-    return true
+  define_method(:is_antigram?) do |input1, input2|
+    input1 != input2
   end
 
-  def is_antigram? (input1, input2)
-    self.downcase.split('').sort != input2.downcase.split('').sort
-    return true
-  end
-  
 end
