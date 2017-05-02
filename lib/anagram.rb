@@ -20,7 +20,11 @@ class String
   end
 
   define_method(:is_antigram?) do |input1, input2|
-    input1 != input2
+    array1 = input1.split('')
+    array2 = input2.split('')
+    intersected_array = array1 & array2
+    if intersected_array.length == 0
+      return true
+    end
   end
-
 end

@@ -2,6 +2,7 @@ require('sinatra')
 require('sinatra/reloader')
 also_reload('lib/**/*.rb')
 require('./lib/anagram')
+require('pry')
 
 
 get('/') do
@@ -18,13 +19,13 @@ get('/result') do
     if words.is_anagram?(input1, input2)
       @result = 'these words are anagrams'
       if words.is_palindrome?(input1, input2)
-        @result = 'these words are palindromes'
+        @result = 'these words are anagrams and palindromes'
       end
     elsif words.is_antigram?(input1, input2)
       @result = 'these words are antigrams'
-    else
-      @result = 'please enter actual words'
     end
+  else
+    @result = 'please enter actual words'
   end
     erb(:result)
 end

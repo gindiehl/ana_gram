@@ -5,7 +5,7 @@ words = String.new
 
 describe 'String#actual_word?' do
   it "returns true if words contain a vowel" do
-    expect(words.actual_word?("krill", "trill")).to(eq(true))
+    expect(words.actual_word?("art", "rat")).to(eq(true))
   end
   it "returns false if word does not contain a vowel" do
     expect(words.actual_word?("mm", "nn")).to(eq(false))
@@ -25,7 +25,7 @@ describe 'String#is_anagram?' do
 end
 
 describe 'String#is_palindrome?' do
-  it 'returns true for a words that are palindromes' do
+  it 'returns true for words that are palindromes' do
     expect(words.is_palindrome?("now", "won")).to(eq(true))
   end
 end
